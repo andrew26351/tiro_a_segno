@@ -12,7 +12,6 @@
             createCanvas(600, 600)
             background(128, 128, 128)
             let diametro = 400
-            let r = diametro/2
 
             fill(255, 255, 255)
             circle(300, 300, diametro)
@@ -34,11 +33,7 @@
             circle(300, 300, diametro-320)
             fill(0, 0, 0)
             circle(300, 300, diametro-360)
-
-
         
-
-
         }
 
         function draw() {
@@ -46,16 +41,50 @@
         }
 
         function mouseClicked(){
+            let centerX = width / 2;
+            let centerY = height / 2;
+    
 
-            console.log(mouseX, mouseY)
+            let distance = dist(mouseX, mouseY, centerX, centerY);
 
-             posX = mouseX 
-             posY = mouseY 
-            if(posX, posY <= 200){
-                console.log("dentro")
+            if(distance <= 200){
+                if(distance>=100){
+                    if(distance>=180){
+                        alert("1 punto")
+                    }
+                    else if(distance >= 160){
+                        alert("2 punti")
+                    }
+                    else if(distance >= 140){
+                        alert("3 punti")
+                    }
+                    else if(distance >= 120){
+                        alert("4 punti")
+                    }
+                    else if(distance >= 100){
+                        alert("5 punti")
+                    }
+                } else{
+                    if(distance>=80){
+                        alert("6 punti")
+                    }
+                    else if(distance >= 60){
+                        alert("7 punti")
+                    }
+                    else if(distance >= 40){
+                        alert("8 punti")
+                    }
+                    else if(distance >= 20){
+                        alert("9 punti")
+                    }
+                    else if(distance >= 0){
+                        alert("10 punti")
+                    }
+                }
+            } else{
+                alert("0 punti fuori")
             }
-        }
-
+    }
         </script>
 
     
